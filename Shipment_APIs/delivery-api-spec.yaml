@@ -1,0 +1,13 @@
+#
+# Copyright Super iPaaS Integration LLC, an IBM Company 2024
+#
+kind: APISpec
+metadata:
+  name: delivery-spec
+  version: 1.0
+  tags: ['delivery', 'shipping']
+  type: open-api
+spec: 
+  open-api:
+    version: 3.0
+  

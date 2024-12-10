@@ -1,0 +1,16 @@
+#
+# Copyright Super iPaaS Integration LLC, an IBM Company 2024
+#
+kind: API
+metadata:
+  name: Delivery-API
+  version: 1.0
+  description: This is the delivery API
+  tags: ['delivery']
+spec: 
+  api-spec:
+    $ref: delivery-spec:1.0
+  policies: 
+    - $ref: OAuth:v1
+    - $ref: 'global: MyAuthPolicy: v1'
+    - $ref: log_invocation:v1

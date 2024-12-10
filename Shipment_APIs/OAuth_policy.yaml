@@ -1,0 +1,9 @@
+#
+# Copyright Super iPaaS Integration LLC, an IBM Company 2024
+#
+kind: policy
+metadata:
+  name: OAuth
+  version: v1
+spec: 
+  auth_type: "api_key"

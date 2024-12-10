@@ -1,0 +1,23 @@
+#
+# Copyright Super iPaaS Integration LLC, an IBM Company 2024
+#
+kind: PolicySequence
+apiVersion: api.webmethods.io/daso
+metadata:
+  name: policyseq
+  version: alpha
+  namespace: ui
+  tags:
+    - seq
+spec:
+  transport:
+    - $ref: ui:transport:alpha
+  iam:
+    - $ref: ui:My_IAM:alpha
+  monitoring:
+    - $ref: ui:log_invocation:alpha
+  routing:
+    - $ref: ui:routing:alpha
+  req-processing:
+    - $ref: ui:validate_API_Specification_policy:alpha
+    - $ref: ui:request_processing_policy:alpha

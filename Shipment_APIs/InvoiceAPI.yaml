@@ -1,0 +1,16 @@
+#
+# Copyright Super iPaaS Integration LLC, an IBM Company 2024
+#
+kind: API
+metadata:
+  name: InvoiceAPI
+  version: 2.0
+  description: This is the invoice API.
+  tags: ['delivery', 'shipping']
+  namespace: Shopping
+spec: 
+  api-spec:
+    $ref: 'Delivery: invoice-spec: 1.0'
+  policies: 
+    - $ref: log_invocation:v1
+    - $ref: 'global: MyAuthPolicy: v1'
