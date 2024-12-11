@@ -4,7 +4,7 @@
 kind: api
 apiVersion: api.webmethods.io/beta
 metadata:
-  name: IAM_hostIPAPI
+  name: IAM_hostIPAPI_VCS_project
   namespace: iam_host_ip
   version: 1
   tags:
