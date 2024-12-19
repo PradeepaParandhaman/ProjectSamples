@@ -1,1 +1,5 @@
-projects: {}
+projects:
+  DeleteProject:
+    description: ''
+    tags: []
+    lastUpdated: 1734593751548
