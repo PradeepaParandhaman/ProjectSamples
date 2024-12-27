@@ -17,3 +17,11 @@ projects:
       - test
       - existing
     lastUpdated: 1735099903113
+  ImportProjectInVcs_UI:
+    description: This is a project created from Existing files in VCS
+    tags:
+      - listing
+      - vcs
+      - test
+      - existing
+    lastUpdated: 1735272750812
