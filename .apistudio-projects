@@ -15,3 +15,13 @@ projects:
       - test
       - existing
     lastUpdated: 1735791220033
+  MultipleFolderImportProject_UI:
+    description: >-
+      This is a project created from Existing files in VCS from selecting across
+      multiple folders
+    tags:
+      - listing
+      - vcs
+      - test
+      - existing
+    lastUpdated: 1735791241953
