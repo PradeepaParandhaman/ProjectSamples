@@ -7,14 +7,6 @@ projects:
       - empty_project
       - test
     lastUpdated: 1736741521969
-  ImportProjectInVcs_UI:
-    description: This is a project created from Existing files in VCS
-    tags:
-      - listing
-      - vcs
-      - test
-      - existing
-    lastUpdated: 1736741541441
   MultipleFolderImportProject_UI:
     description: >-
       This is a project created from Existing files in VCS from selecting across
