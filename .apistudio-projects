@@ -1,11 +1,1 @@
-projects:
-  MultipleFolderImportProject_UI:
-    description: >-
-      This is a project created from Existing files in VCS from selecting across
-      multiple folders
-    tags:
-      - listing
-      - vcs
-      - test
-      - existing
-    lastUpdated: 1737000823307
+projects: {}
