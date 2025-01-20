@@ -7,3 +7,11 @@ projects:
       - empty_project
       - test
     lastUpdated: 1737346291760
+  ImportProjectInVcs_UI:
+    description: This is a project created from Existing files in VCS
+    tags:
+      - listing
+      - vcs
+      - test
+      - existing
+    lastUpdated: 1737346310396
