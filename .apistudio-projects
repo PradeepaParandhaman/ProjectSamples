@@ -9,10 +9,6 @@ projects:
       - test
       - existing
     lastUpdated: 1737951146773
-  test_api:
-    description: ''
-    tags: []
-    lastUpdated: 1741780760669
   DeployTestPrj2:
     description: ''
     tags: []
