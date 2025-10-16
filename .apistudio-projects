@@ -9,10 +9,6 @@ projects:
       - test
       - existing
     lastUpdated: 1737951146773
-  DeployTestPrj2:
-    description: ''
-    tags: []
-    lastUpdated: 1743874123524
   Content_Routing_UI copy:
     description: ''
     tags: []
