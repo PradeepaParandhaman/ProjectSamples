@@ -1,8 +1,4 @@
 projects:
-  testCommit:
-    description: ''
-    tags: []
-    lastUpdated: 1734678763016
   CreateEmptyProjectInVcs_UI:
     description: This is a project created in VCS from Project Listing page
     tags:
@@ -29,10 +25,6 @@ projects:
       - test
       - existing
     lastUpdated: 1734683947906
-  Sample_project1:
-    description: ''
-    tags: []
-    lastUpdated: 1760517500244
   Deepak_test:
     description: ''
     tags: []
