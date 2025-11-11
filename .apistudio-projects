@@ -1,5 +1,1 @@
-projects:
-  LoadBalancerProject:
-    description: ''
-    tags: []
-    lastUpdated: 1762848545505
+projects: {}
