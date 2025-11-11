@@ -1,5 +1,5 @@
 projects:
-  LoadSampleProject:
+  LoadBalancerProject:
     description: ''
     tags: []
-    lastUpdated: 1762848522335
+    lastUpdated: 1762848545505
