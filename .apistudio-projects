@@ -1,1 +1,25 @@
-projects: {}
+projects:
+  Datapower-API-Gateway:
+    description: Sample project with API definitions and policies
+    tags:
+      - sample
+      - API
+    lastUpdated: 1763454742058
+  WM-APIKey-Petstore:
+    description: Sample project with API definitions and policies
+    tags:
+      - sample
+      - API
+    lastUpdated: 1763454742061
+  WM-NoAuth-Petstore:
+    description: Sample project with API definitions and policies
+    tags:
+      - sample
+      - API
+    lastUpdated: 1763454742063
+  WM-Product-Petstore:
+    description: Sample project with API definitions and policies
+    tags:
+      - sample
+      - API
+    lastUpdated: 1763454742064
