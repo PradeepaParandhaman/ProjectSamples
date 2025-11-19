@@ -1,1 +1,25 @@
-projects: {}
+projects:
+  DPv6_Product_Petstore:
+    description: Sample project with API definitions and policies
+    tags:
+      - sample
+      - API
+    lastUpdated: 1763535065200
+  wM-APIKey-Petstore:
+    description: Sample project with API definitions and policies
+    tags:
+      - sample
+      - API
+    lastUpdated: 1763535065206
+  wM-NoAuth-Petstore:
+    description: Sample project with API definitions and policies
+    tags:
+      - sample
+      - API
+    lastUpdated: 1763535065211
+  wM-Product-Petstore:
+    description: Sample project with API definitions and policies
+    tags:
+      - sample
+      - API
+    lastUpdated: 1763535065214
