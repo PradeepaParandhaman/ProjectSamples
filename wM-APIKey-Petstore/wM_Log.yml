@@ -5,7 +5,7 @@ metadata:
   namespace: wM_APIKey_Petstore
   version: '1.0'
   tags:
-    - log
+    - log1
   labels:
     gatewayTypes:
       - webMethods
