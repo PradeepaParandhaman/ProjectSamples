@@ -25,3 +25,4 @@ This sample contains the following assets:
 4. For validation, use Tryout or run the tests present under the tests fodler.
 5. For Tryout, pass the clientId in the header with the header name "X-IBM-Client-Id"
 6. For executing the tests, replace the "clientId" variable value in the environment file under tests with the key from the created application.
+7.  null
