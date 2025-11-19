@@ -5,7 +5,7 @@ metadata:
   namespace: wM_Product_Petstore
   version: '1.0'
   tags:
-    - product
+    - product 
   description: ''
 spec:
   apis:
