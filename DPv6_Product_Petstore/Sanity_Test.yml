@@ -3,7 +3,7 @@ apiVersion: api.ibm.com/v1
 metadata:
   name: Sanity
   namespace: DPv6_Product_Petstore
-  version: "1.0"
+  version: "1.0" 
   tags:
     - sanity-test
 spec:
