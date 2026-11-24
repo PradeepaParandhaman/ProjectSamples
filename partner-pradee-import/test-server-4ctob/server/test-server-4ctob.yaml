@@ -1,0 +1,21 @@
+kind: MCPServer
+apiVersion: api.ibm.com/v1
+metadata:
+  name: test-server-4ctob
+  namespace: partner-pradee-import
+  version: 1.0.0
+  tags: []
+  domain: mcp
+  labels:
+    origin: mcp-mcp
+    partner: true
+spec:
+  title: test
+  protocolVersion: V2025_11_25
+  plans:
+    - $ref: partner-pradee-import:plan-4ctob:1.0.0
+  policy-sequence:
+    - $ref: partner-pradee-import:policy-sequence-4ctob:1.0.0
+  capabilities:
+    tools:
+      - $ref: partner-pradee-import:test-tool-4ctob:1.0.0
