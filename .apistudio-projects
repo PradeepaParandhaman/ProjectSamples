@@ -13,7 +13,7 @@ projects:
     id: 82AnoBdA
     description: ''
     tags: []
-    lastUpdated: 1795499285612
+    lastUpdated: 1795517119634
   NewPartner:
     id: FEEqlzF5
     description: ''
@@ -30,8 +30,3 @@ projects:
     description: ''
     tags: []
     lastUpdated: 1795512755670
-  partner-pradee-import:
-    id: i85P80tM
-    description: ''
-    tags: []
-    lastUpdated: 1795516998564
