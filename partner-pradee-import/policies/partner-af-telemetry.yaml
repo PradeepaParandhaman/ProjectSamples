@@ -1,0 +1,10 @@
+kind: Telemetry
+apiVersion: api.ibm.com/v1
+metadata:
+  name: partner-af-telemetry
+  namespace: partner-ns-af
+  version: 1.0.0
+  domain: ai-platform
+spec:
+  verbosity:
+    - level: basic
