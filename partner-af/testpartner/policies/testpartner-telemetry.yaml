@@ -1,0 +1,10 @@
+kind: Telemetry
+apiVersion: api.ibm.com/v1
+metadata:
+  name: testpartner-telemetry
+  namespace: partner-pp
+  version: 1.0.0
+  domain: partner
+spec:
+  verbosity:
+    - level: basic

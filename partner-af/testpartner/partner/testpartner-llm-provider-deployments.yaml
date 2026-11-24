@@ -1,0 +1,26 @@
+kind: LLMProviderDeployments
+apiVersion: api.ibm.com/v1
+metadata:
+  name: testpartner-llm-provider-deployments
+  namespace: partner-pp
+  version: 1.0.0
+  domain: partner
+spec:
+  name: openai
+  provider:
+    kind: openaiCompatible
+  credential:
+    byok:
+      header: test
+  deployments:
+    - name: newdeployment
+      models:
+        - providerModel: GPT Astra
+          capabilities: []
+          timeoutMs: 30000
+          pricing:
+            inputPerMillion: 1
+            outputPerMillion: 1
+      apiBase: http://test.com
+      providerSettings:
+        providerName: openai

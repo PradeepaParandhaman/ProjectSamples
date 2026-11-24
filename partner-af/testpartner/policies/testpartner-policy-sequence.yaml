@@ -1,0 +1,24 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: testpartner-policy-sequence
+  namespace: partner-pp
+  version: 1.0.0
+  domain: partner
+  labels:
+    gatewayTypes:
+      - nano
+    scope: partner
+spec:
+  main:
+    - $kind: LLMRouter
+      spec:
+        models:
+          - name: GPT Astra
+            targets:
+              - target: openai.newdeployment.GPT Astra
+        strategy: simpleShuffle
+      enabled: true
+  monitoring:
+    $kind: Telemetry
+    $ref: partner-pp:testpartner-telemetry:1.0.0

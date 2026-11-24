@@ -1,0 +1,22 @@
+kind: Partner
+apiVersion: api.ibm.com/v1
+metadata:
+  name: testpartner
+  namespace: partner-pp
+  version: 1.0.0
+  domain: partner
+  tags: []
+spec:
+  partnerId: testpartner-saa7y
+  title: testpartner
+  basePath: /stage
+  operations:
+    - createChatCompletion
+    - createResponse
+    - createEmbedding
+    - listModels
+    - retrieveModel
+  policy-sequence:
+    $ref: partner-pp:testpartner-policy-sequence:1.0.0
+  llmProviderDeployments:
+    - $ref: partner-pp:testpartner-llm-provider-deployments:1.0.0
