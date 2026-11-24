@@ -1,0 +1,25 @@
+kind: Partner
+apiVersion: api.ibm.com/v1
+metadata:
+  name: partner-p
+  namespace: partner-ns-p
+  version: 1.0.0
+  domain: partner
+  tags: []
+spec:
+  partnerId: partner-af-8jjub
+  title: partner-af
+  basePath: /test
+  operations:
+    - createChatCompletion
+    - createResponse
+    - createEmbedding
+    - listModels
+    - retrieveModel
+    - watsonxTextChat
+    - tokenize
+    - textGen
+  policy-sequence:
+    $ref: partner-ns-af:partner-af-policy-sequence:1.0.0
+  llmProviderDeployments:
+    - $ref: partner-ns-p:partner-p-llm-provider-deployments:1.0.0

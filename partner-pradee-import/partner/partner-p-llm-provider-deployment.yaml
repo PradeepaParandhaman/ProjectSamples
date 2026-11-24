@@ -1,0 +1,34 @@
+kind: LLMProviderDeployments
+apiVersion: api.ibm.com/v1
+metadata:
+  name: partner-p-llm-provider-deployments
+  namespace: partner-ns-p
+  version: 1.0.0
+  domain: partner
+spec:
+  name: watsonx-test
+  provider:
+    kind: watsonx
+  credential:
+    byok:
+      header: watsonx
+  deployments:
+    - name: watsonx
+      models:
+        - providerModel: gp-04
+          capabilities: []
+          timeoutMs: 30000
+          pricing:
+            inputPerMillion: 0
+            outputPerMillion: 0
+        - providerModel: gp-06
+          capabilities: []
+          timeoutMs: 2000
+          pricing:
+            inputPerMillion: 1
+            outputPerMillion: 1
+      apiBase: https://us-south.ml.cloud.ibm.com
+      providerSettings:
+        region: us-south
+        projectId: 979c26f2-7efb-4085-9e94-c31aae76ba08
+        opVersion: '2024-03-14'
