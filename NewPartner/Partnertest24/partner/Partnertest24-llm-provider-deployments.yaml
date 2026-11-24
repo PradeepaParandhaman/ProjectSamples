@@ -1,0 +1,28 @@
+kind: LLMProviderDeployments
+apiVersion: api.ibm.com/v1
+metadata:
+  name: Partnertest24-llm-provider-deployments
+  namespace: partner24
+  version: 1.0.0
+  domain: partner
+spec:
+  name: watsonx
+  provider:
+    kind: watsonx
+  credential:
+    byok:
+      header: auth
+  deployments:
+    - name: testwatson
+      models:
+        - providerModel: watson test
+          capabilities: []
+          timeoutMs: 30000
+          pricing:
+            inputPerMillion: 1
+            outputPerMillion: 1
+      apiBase: https://us-east.ml.cloud.ibm.com
+      providerSettings:
+        region: us-east
+        projectId: test
+        opVersion: "2024-03-14"

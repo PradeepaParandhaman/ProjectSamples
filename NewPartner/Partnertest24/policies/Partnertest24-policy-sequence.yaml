@@ -1,0 +1,24 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: Partnertest24-policy-sequence
+  namespace: partner24
+  version: 1.0.0
+  domain: partner
+  labels:
+    gatewayTypes:
+      - nano
+    scope: partner
+spec:
+  main:
+    - $kind: LLMRouter
+      spec:
+        models:
+          - name: watson test
+            targets:
+              - target: watsonx.testwatson.watson test
+        strategy: simpleShuffle
+      enabled: true
+  monitoring:
+    $kind: Telemetry
+    $ref: partner24:Partnertest24-telemetry:1.0.0

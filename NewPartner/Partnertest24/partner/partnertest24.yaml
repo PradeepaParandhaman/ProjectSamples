@@ -1,0 +1,25 @@
+kind: Partner
+apiVersion: api.ibm.com/v1
+metadata:
+  name: Partnertest24
+  namespace: partner24
+  version: 1.0.0
+  domain: partner
+  tags: []
+spec:
+  partnerId: partnertest24-e6bkc
+  title: Partnertest24
+  basePath: /test
+  operations:
+    - createChatCompletion
+    - createResponse
+    - createEmbedding
+    - listModels
+    - retrieveModel
+    - watsonxTextChat
+    - tokenize
+    - textGen
+  policy-sequence:
+    $ref: partner24:Partnertest24-policy-sequence:1.0.0
+  llmProviderDeployments:
+    - $ref: partner24:Partnertest24-llm-provider-deployments:1.0.0

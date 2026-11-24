@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "0ff389e2-ee3e-4124-a50a-d2c5bd3c1ed9:0",
+      "projectId": "FEEqlzF5",
+      "filePath": "NewPartner/Partnertest24/partner/Partnertest24-llm-provider-deployments.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795500470430,
+      "schemaVersion": 1,
+      "kind": "LLMProviderDeployments",
+      "name": "Partnertest24-llm-provider-deployments",
+      "namespace": "partner24",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "53863a7077b2c88f"
+    },
+    {
+      "id": "2d401248-1a39-4404-8978-35f807ac6c06:0",
+      "projectId": "FEEqlzF5",
+      "filePath": "NewPartner/Partnertest24/policies/Partnertest24-policy-sequence.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795500473055,
+      "schemaVersion": 1,
+      "kind": "FreeFlowPolicySequence",
+      "name": "Partnertest24-policy-sequence",
+      "namespace": "partner24",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "3a9e0d0d75245fe9"
+    },
+    {
+      "id": "3fb27161-4d3b-414a-9842-4c728b9c97ed:0",
+      "projectId": "FEEqlzF5",
+      "filePath": "NewPartner/Partnertest24/policies/Partnertest24-telemetry.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795500472286,
+      "schemaVersion": 1,
+      "kind": "Telemetry",
+      "name": "Partnertest24-telemetry",
+      "namespace": "partner24",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "dbc1a38e69007046"
+    },
+    {
+      "id": "e10659c0-0844-47e2-9b27-422705a6a30c:0",
+      "projectId": "FEEqlzF5",
+      "filePath": "NewPartner/Partnertest24/partner/partnertest24.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795500473840,
+      "schemaVersion": 1,
+      "kind": "Partner",
+      "name": "Partnertest24",
+      "namespace": "partner24",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "887ffe9ee0dcb3aa"
+    }
+  ],
+  "edges": [
+    {
+      "id": "9ea6149e-8615-432d-9778-729853e7cd4f",
+      "projectId": "FEEqlzF5",
+      "sourceNodeId": "e10659c0-0844-47e2-9b27-422705a6a30c:0",
+      "targetNodeId": "0ff389e2-ee3e-4124-a50a-d2c5bd3c1ed9:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner24:Partnertest24-llm-provider-deployments:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795500473850,
+      "lastValidated": 1795500473850
+    },
+    {
+      "id": "af24d988-c41f-4a8e-9e9c-ceb944f1fe7a",
+      "projectId": "FEEqlzF5",
+      "sourceNodeId": "e10659c0-0844-47e2-9b27-422705a6a30c:0",
+      "targetNodeId": "2d401248-1a39-4404-8978-35f807ac6c06:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner24:Partnertest24-policy-sequence:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795500473850,
+      "lastValidated": 1795500473850
+    },
+    {
+      "id": "ba51b65b-35ef-42e5-a338-9613a90fac41",
+      "projectId": "FEEqlzF5",
+      "sourceNodeId": "2d401248-1a39-4404-8978-35f807ac6c06:0",
+      "targetNodeId": "3fb27161-4d3b-414a-9842-4c728b9c97ed:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner24:Partnertest24-telemetry:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795500473062,
+      "lastValidated": 1795500473062
+    }
+  ]
+}
