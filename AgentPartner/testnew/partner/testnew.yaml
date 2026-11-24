@@ -1,0 +1,31 @@
+kind: Partner
+apiVersion: api.ibm.com/v1
+metadata:
+  name: testnew
+  namespace: pp
+  version: 1.0.0
+  domain: partner
+  tags: []
+spec:
+  partnerId: testnew-uowm7
+  title: testnew
+  basePath: /test
+  operations:
+    - createChatCompletion
+    - createResponse
+    - createEmbedding
+  policy-sequence:
+    $ref: pp:testnew-policy-sequence:1.0.0
+  llmProviderDeployments:
+    - $ref: pp:testnew-llm-provider-deployments:1.0.0
+  agents:
+    - $kind: Agent
+      enabled: true
+      spec:
+        title: agenttest
+        agentId: agenttest-sdvz6
+    - $kind: Agent
+      enabled: true
+      spec:
+        title: agent2
+        agentId: agent2-55nrz

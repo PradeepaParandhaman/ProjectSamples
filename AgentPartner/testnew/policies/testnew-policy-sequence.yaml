@@ -1,0 +1,24 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: testnew-policy-sequence
+  namespace: pp
+  version: 1.0.0
+  domain: partner
+  labels:
+    gatewayTypes:
+      - nano
+    scope: partner
+spec:
+  main:
+    - $kind: LLMRouter
+      spec:
+        models:
+          - name: watson-deploy
+            targets:
+              - target: testwatson.testdeploy.watson-deploy
+        strategy: simpleShuffle
+      enabled: true
+  monitoring:
+    $kind: Telemetry
+    $ref: pp:testnew-telemetry:1.0.0

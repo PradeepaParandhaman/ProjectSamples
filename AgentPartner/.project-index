@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "id": "20e863f2-8eca-44b7-b493-b082f203f6d6:0",
+      "projectId": "5d6URWUt",
+      "filePath": "AgentPartner/testnew/policies/testnew-telemetry.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795501082198,
+      "schemaVersion": 1,
+      "kind": "Telemetry",
+      "name": "testnew-telemetry",
+      "namespace": "pp",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "72f4e6872b248f12"
+    },
+    {
+      "id": "73686f67-d5c0-4026-bc2a-499b613fcf7a:0",
+      "projectId": "5d6URWUt",
+      "filePath": "AgentPartner/.project-index",
+      "docIndex": 0,
+      "assetType": "support",
+      "lastIndexed": 1795501134043,
+      "schemaVersion": 1
+    },
+    {
+      "id": "a1f39be1-c77e-4abd-8a76-683a2466d2bd:0",
+      "projectId": "5d6URWUt",
+      "filePath": "AgentPartner/testnew/partner/testnew-llm-provider-deployments.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795501134045,
+      "schemaVersion": 1,
+      "kind": "LLMProviderDeployments",
+      "name": "testnew-llm-provider-deployments",
+      "namespace": "pp",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "c3a70b531214b629"
+    },
+    {
+      "id": "df06aae9-a33f-42f5-846f-a81b5674853c:0",
+      "projectId": "5d6URWUt",
+      "filePath": "AgentPartner/testnew/policies/testnew-policy-sequence.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795501134048,
+      "schemaVersion": 1,
+      "kind": "FreeFlowPolicySequence",
+      "name": "testnew-policy-sequence",
+      "namespace": "pp",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "07dd2a71dd3473aa"
+    },
+    {
+      "id": "ed849118-3385-4d0f-88ef-7a59d7434e5b:0",
+      "projectId": "5d6URWUt",
+      "filePath": "AgentPartner/testnew/partner/testnew.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795501101582,
+      "schemaVersion": 1,
+      "kind": "Partner",
+      "name": "testnew",
+      "namespace": "pp",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "4a2978eea8c885c1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "108dc623-5007-4a06-81f0-3bee28550a5b",
+      "projectId": "5d6URWUt",
+      "sourceNodeId": "ed849118-3385-4d0f-88ef-7a59d7434e5b:0",
+      "targetNodeId": "a1f39be1-c77e-4abd-8a76-683a2466d2bd:0",
+      "targetRefType": "same-project",
+      "targetRefString": "pp:testnew-llm-provider-deployments:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795501083786,
+      "lastValidated": 1795501083786
+    },
+    {
+      "id": "517256d9-c389-4a17-943a-c23471462587",
+      "projectId": "5d6URWUt",
+      "sourceNodeId": "ed849118-3385-4d0f-88ef-7a59d7434e5b:0",
+      "targetNodeId": "df06aae9-a33f-42f5-846f-a81b5674853c:0",
+      "targetRefType": "same-project",
+      "targetRefString": "pp:testnew-policy-sequence:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795501083786,
+      "lastValidated": 1795501083786
+    },
+    {
+      "id": "e2af8592-f688-4e19-bc12-b4b61a38e5dc",
+      "projectId": "5d6URWUt",
+      "sourceNodeId": "df06aae9-a33f-42f5-846f-a81b5674853c:0",
+      "targetNodeId": "20e863f2-8eca-44b7-b493-b082f203f6d6:0",
+      "targetRefType": "same-project",
+      "targetRefString": "pp:testnew-telemetry:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795501082995,
+      "lastValidated": 1795501082995
+    }
+  ]
+}
