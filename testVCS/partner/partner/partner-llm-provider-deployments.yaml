@@ -1,0 +1,28 @@
+kind: LLMProviderDeployments
+apiVersion: api.ibm.com/v1
+metadata:
+  name: partner-llm-provider-deployments
+  namespace: testvcs
+  version: 1.0.0
+  domain: partner
+spec:
+  name: watson
+  provider:
+    kind: watsonx
+  credential:
+    byok:
+      header: auth
+  deployments:
+    - name: test
+      models:
+        - providerModel: watson
+          capabilities: []
+          timeoutMs: 30000
+          pricing:
+            inputPerMillion: 1
+            outputPerMillion: 1
+      apiBase: https://us-east.ml.cloud.ibm.com
+      providerSettings:
+        region: us-east
+        projectId: test
+        opVersion: "2024-03-14"

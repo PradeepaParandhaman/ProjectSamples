@@ -1,0 +1,25 @@
+kind: Partner
+apiVersion: api.ibm.com/v1
+metadata:
+  name: partner
+  namespace: testvcs
+  version: 1.0.0
+  domain: partner
+  tags: []
+spec:
+  partnerId: partner-zidn4
+  title: partner
+  basePath: /test
+  operations:
+    - createChatCompletion
+    - createResponse
+    - createEmbedding
+    - listModels
+    - retrieveModel
+    - watsonxTextChat
+    - tokenize
+    - textGen
+  policy-sequence:
+    $ref: testvcs:partner-policy-sequence:1.0.0
+  llmProviderDeployments:
+    - $ref: testvcs:partner-llm-provider-deployments:1.0.0

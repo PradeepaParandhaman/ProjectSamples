@@ -1,0 +1,24 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: partner-policy-sequence
+  namespace: testvcs
+  version: 1.0.0
+  domain: partner
+  labels:
+    gatewayTypes:
+      - nano
+    scope: partner
+spec:
+  main:
+    - $kind: LLMRouter
+      spec:
+        models:
+          - name: watson
+            targets:
+              - target: watson.test.watson
+        strategy: simpleShuffle
+      enabled: true
+  monitoring:
+    $kind: Telemetry
+    $ref: testvcs:partner-telemetry:1.0.0

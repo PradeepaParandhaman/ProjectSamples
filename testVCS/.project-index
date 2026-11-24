@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "id": "4664690a-d006-4f24-b532-2cc516cda07f:0",
+      "projectId": "MEXPP236",
+      "filePath": "testVCS/partner/policies/partner-policy-sequence.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795507244482,
+      "schemaVersion": 1,
+      "kind": "FreeFlowPolicySequence",
+      "name": "partner-policy-sequence",
+      "namespace": "testvcs",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "4d3ce1eb19a43681"
+    },
+    {
+      "id": "53a2a8aa-f8af-46b4-8470-bfd66db6606c:0",
+      "projectId": "MEXPP236",
+      "filePath": "testVCS/partner/policies/partner-telemetry.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795507243692,
+      "schemaVersion": 1,
+      "kind": "Telemetry",
+      "name": "partner-telemetry",
+      "namespace": "testvcs",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "0749db2fd79f015d"
+    },
+    {
+      "id": "c6c2f218-5d8a-425e-b7b5-f6a264819a9b:0",
+      "projectId": "MEXPP236",
+      "filePath": "testVCS/partner/partner/partner-llm-provider-deployments.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795507241733,
+      "schemaVersion": 1,
+      "kind": "LLMProviderDeployments",
+      "name": "partner-llm-provider-deployments",
+      "namespace": "testvcs",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "04411567e52e9efa"
+    },
+    {
+      "id": "f5ae0227-76f3-4dc6-9831-7a07d4ea26d9:0",
+      "projectId": "MEXPP236",
+      "filePath": "testVCS/partner/partner/partner.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795507245289,
+      "schemaVersion": 1,
+      "kind": "Partner",
+      "name": "partner",
+      "namespace": "testvcs",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "7b6201cc18b70f24"
+    }
+  ],
+  "edges": [
+    {
+      "id": "1080cc95-dd5c-454e-aab3-cbd86203039f",
+      "projectId": "MEXPP236",
+      "sourceNodeId": "4664690a-d006-4f24-b532-2cc516cda07f:0",
+      "targetNodeId": "53a2a8aa-f8af-46b4-8470-bfd66db6606c:0",
+      "targetRefType": "same-project",
+      "targetRefString": "testvcs:partner-telemetry:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795507244483,
+      "lastValidated": 1795507244483
+    },
+    {
+      "id": "1bf55170-52fe-40d9-8cfa-0f384e492a6b",
+      "projectId": "MEXPP236",
+      "sourceNodeId": "f5ae0227-76f3-4dc6-9831-7a07d4ea26d9:0",
+      "targetNodeId": "4664690a-d006-4f24-b532-2cc516cda07f:0",
+      "targetRefType": "same-project",
+      "targetRefString": "testvcs:partner-policy-sequence:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795507245291,
+      "lastValidated": 1795507245291
+    },
+    {
+      "id": "da958034-2f6d-4d13-801f-7071d8ed2881",
+      "projectId": "MEXPP236",
+      "sourceNodeId": "f5ae0227-76f3-4dc6-9831-7a07d4ea26d9:0",
+      "targetNodeId": "c6c2f218-5d8a-425e-b7b5-f6a264819a9b:0",
+      "targetRefType": "same-project",
+      "targetRefString": "testvcs:partner-llm-provider-deployments:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795507245291,
+      "lastValidated": 1795507245291
+    }
+  ]
+}
