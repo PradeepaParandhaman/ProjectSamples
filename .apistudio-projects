@@ -40,3 +40,16 @@ projects:
     description: ''
     tags: []
     lastUpdated: 1795517522498
+  Interact_GW_Master_Project:
+    id: 5157bnAQ
+    description: >-
+      Master test project of MCP Server connections on DataPower Nano Gateway,
+      covering REST-to-MCP (Petstore) and MCP-to-MCP (DeepWiki) proxying, each
+      with and without subscription-based authentication, plus quota and
+      telemetry policies.
+    tags:
+      - DataPower Nano Gateway
+      - mcp-server
+      - authentication
+      - ai
+    lastUpdated: 1795765244950
