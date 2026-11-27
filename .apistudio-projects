@@ -82,9 +82,14 @@ projects:
     id: NRPcrATl
     description: ''
     tags: []
-    lastUpdated: 1795766148200
+    lastUpdated: 1795770388904
   llmproxystandalone:
     id: 91FcU4Hf
     description: ''
     tags: []
     lastUpdated: 1795768112348
+  partnerllmcostlimit:
+    id: fTDwuTqp
+    description: ''
+    tags: []
+    lastUpdated: 1795777388779
