@@ -1,0 +1,138 @@
+{
+  "nodes": [
+    {
+      "id": "1430d1b6-8d68-4483-a614-f078aae2c248:0",
+      "projectId": "ZjT0DTpi",
+      "filePath": "partnerllmcostlimit/.keep",
+      "docIndex": 0,
+      "assetType": "support",
+      "lastIndexed": 1795786970841,
+      "schemaVersion": 1
+    },
+    {
+      "id": "1f233ed4-b4ad-4dbc-a944-50f75a1111a5:0",
+      "projectId": "ZjT0DTpi",
+      "filePath": "partnerllmcostlimit/llmproxypartner/partner/llmproxypartner-llm-provider-deployments.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795786972375,
+      "schemaVersion": 1,
+      "kind": "LLMProviderDeployments",
+      "name": "llmproxypartner-llm-provider-deployments",
+      "namespace": "partnerllmcostlimit",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "6d37f2879d71d080"
+    },
+    {
+      "id": "77949227-a696-48e7-81e6-e832ed4b9458:0",
+      "projectId": "ZjT0DTpi",
+      "filePath": "partnerllmcostlimit/llmproxypartner/policies/llmproxypartner-llm-router.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795786973088,
+      "schemaVersion": 1,
+      "kind": "LLMRouter",
+      "name": "llmproxypartner-llm-router",
+      "namespace": "partnerllmcostlimit",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "5a0634c2d11991c5"
+    },
+    {
+      "id": "930c09c2-a9fb-4137-bff8-4cbadbbeb840:0",
+      "projectId": "ZjT0DTpi",
+      "filePath": "partnerllmcostlimit/llmproxypartner/partner/llmproxypartner.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795786975430,
+      "schemaVersion": 1,
+      "kind": "Partner",
+      "name": "llmproxypartner",
+      "namespace": "partnerllmcostlimit",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "ac0200411239d4b7"
+    },
+    {
+      "id": "d99e2492-79df-4abe-a311-bc45b3d80f0c:0",
+      "projectId": "ZjT0DTpi",
+      "filePath": "partnerllmcostlimit/llmproxypartner/policies/llmproxypartner-policy-sequence.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795786974602,
+      "schemaVersion": 1,
+      "kind": "FreeFlowPolicySequence",
+      "name": "llmproxypartner-policy-sequence",
+      "namespace": "partnerllmcostlimit",
+      "version": "1.0.0",
+      "domain": "mcp",
+      "contentHash": "deb43ee9099b43d7"
+    },
+    {
+      "id": "e0ab66e2-ef22-46e0-80cf-19612427d145:0",
+      "projectId": "ZjT0DTpi",
+      "filePath": "partnerllmcostlimit/llmproxypartner/policies/llmproxypartner-telemetry.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795786973823,
+      "schemaVersion": 1,
+      "kind": "Telemetry",
+      "name": "llmproxypartner-telemetry",
+      "namespace": "partnerllmcostlimit",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "dac32e6cc9d80416"
+    }
+  ],
+  "edges": [
+    {
+      "id": "1cb0223e-1281-4c2c-88e3-0f45e6fdb62f",
+      "projectId": "ZjT0DTpi",
+      "sourceNodeId": "d99e2492-79df-4abe-a311-bc45b3d80f0c:0",
+      "targetNodeId": "77949227-a696-48e7-81e6-e832ed4b9458:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partnerllmcostlimit:llmproxypartner-llm-router:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795786974606,
+      "lastValidated": 1795786974606
+    },
+    {
+      "id": "4537cf72-10db-4aa4-a72a-74d5d13b42fd",
+      "projectId": "ZjT0DTpi",
+      "sourceNodeId": "d99e2492-79df-4abe-a311-bc45b3d80f0c:0",
+      "targetNodeId": "e0ab66e2-ef22-46e0-80cf-19612427d145:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partnerllmcostlimit:llmproxypartner-telemetry:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795786974606,
+      "lastValidated": 1795786974606
+    },
+    {
+      "id": "6695279b-87e3-4c7f-8081-295470e17156",
+      "projectId": "ZjT0DTpi",
+      "sourceNodeId": "930c09c2-a9fb-4137-bff8-4cbadbbeb840:0",
+      "targetNodeId": "d99e2492-79df-4abe-a311-bc45b3d80f0c:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partnerllmcostlimit:llmproxypartner-policy-sequence:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795786975431,
+      "lastValidated": 1795786975431
+    },
+    {
+      "id": "b41fea28-b9fa-4f5d-8ddf-66168dfac0a7",
+      "projectId": "ZjT0DTpi",
+      "sourceNodeId": "930c09c2-a9fb-4137-bff8-4cbadbbeb840:0",
+      "targetNodeId": "1f233ed4-b4ad-4dbc-a944-50f75a1111a5:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partnerllmcostlimit:llmproxypartner-llm-provider-deployments:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795786975431,
+      "lastValidated": 1795786975431
+    }
+  ]
+}

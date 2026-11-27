@@ -1,0 +1,37 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: llmproxypartner-policy-sequence
+  namespace: partnerllmcostlimit
+  version: 1.0.0
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+    scope: partner
+  domain: mcp
+spec:
+  main:
+    - $kind: CostLimit
+      spec:
+        name: costlimit-ndf4c
+        limits:
+          - name: daily-usd
+            max: 0.000001
+            intervalLen: 1
+            intervalUnit: second
+          - name: monthly-usd
+            max: 1000
+            intervalLen: 1
+            intervalUnit: day
+          - name: yearly-usd
+            max: 12000
+            intervalLen: 1
+            intervalUnit: day
+      enabled: true
+    - $kind: LLMRouter
+      $ref: partnerllmcostlimit:llmproxypartner-llm-router:1.0.0
+      enabled: true
+  monitoring:
+    $kind: Telemetry
+    $ref: partnerllmcostlimit:llmproxypartner-telemetry:1.0.0

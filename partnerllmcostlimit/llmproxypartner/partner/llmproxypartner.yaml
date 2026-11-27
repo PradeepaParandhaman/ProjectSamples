@@ -1,0 +1,25 @@
+kind: Partner
+apiVersion: api.ibm.com/v1
+metadata:
+  name: llmproxypartner
+  namespace: partnerllmcostlimit
+  version: 1.0.0
+  domain: partner
+  tags: []
+spec:
+  partnerId: llmproxypartner-h35n6
+  title: llmproxypartner
+  basePath: /
+  operations:
+    - createChatCompletion
+    - createResponse
+    - createEmbedding
+    - listModels
+    - retrieveModel
+    - watsonxTextChat
+    - tokenize
+    - textGen
+  policy-sequence:
+    $ref: partnerllmcostlimit:llmproxypartner-policy-sequence:1.0.0
+  llmProviderDeployments:
+    - $ref: partnerllmcostlimit:llmproxypartner-llm-provider-deployments:1.0.0

@@ -1,0 +1,10 @@
+kind: Telemetry
+apiVersion: api.ibm.com/v1
+metadata:
+  name: llmproxypartner-telemetry
+  namespace: partnerllmcostlimit
+  version: 1.0.0
+  domain: partner
+spec:
+  verbosity:
+    - level: basic
