@@ -1,0 +1,180 @@
+kind: LLMProviderDeployments
+apiVersion: api.ibm.com/v1
+metadata:
+  name: providerdeployment-llmprovider-llmtestpp-bs24y
+  namespace: llmproxystandalone
+  version: 1.0.0
+  tags: []
+  domain: ai-platform
+  description: llmtestpp provider deployments for llmprovider
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  name: llmprovider
+  provider: null:llmprovider:1.0.0
+  deployments:
+    - name: watsondeploy
+      models:
+        - providerModel: ibm/granite-3-1-8b-base
+          displayName: granite-3-1-8b-base
+          description: >-
+            Granite 3.1 8b base is a pre-trained autoregressive foundation model
+            with a context length of 128k intended for tuning.
+          capabilities:
+            - chat
+        - providerModel: ibm/granite-4-h-small
+          pricing:
+            inputPerMillion: 0
+            outputPerMillion: 10
+          displayName: granite-4-h-small
+          description: >-
+            Granite-4.0-H-Small is a 30B parameter long-context instruct model
+            finetuned from Granite-4.0-H-Small-Base using a combination of open
+            source instruction datasets with permissive license and internally
+            collected synthetic datasets.
+          capabilities:
+            - chat
+        - providerModel: ibm/granite-embedding-278m-multilingual
+          displayName: granite-embedding-278m-multilingual
+          description: >-
+            Granite-Embedding-278M-Multilingual is a 278M parameter model from
+            the Granite Embeddings suite that can be used to generate high
+            quality text embeddings.
+          capabilities:
+            - embedding
+        - providerModel: ibm/granite-ttm-1024-96-r2
+          pricing:
+            inputPerMillion: 0.38
+            outputPerMillion: 0.38
+          displayName: granite-ttm-1024-96-r2
+          description: >-
+            TinyTimeMixers (TTMs) are compact pre-trained models for
+            Multivariate Time-Series Forecasting, open-sourced by IBM Research
+          capabilities:
+            - chat
+        - providerModel: ibm/granite-ttm-1536-96-r2
+          pricing:
+            inputPerMillion: 0.38
+            outputPerMillion: 0.38
+          displayName: granite-ttm-1536-96-r2
+          description: >-
+            TinyTimeMixers (TTMs) are compact pre-trained models for
+            Multivariate Time-Series Forecasting, open-sourced by IBM Research
+          capabilities:
+            - chat
+        - providerModel: ibm/granite-ttm-512-96-r2
+          pricing:
+            inputPerMillion: 0.38
+            outputPerMillion: 0.38
+          displayName: granite-ttm-512-96-r2
+          description: >-
+            TinyTimeMixers (TTMs) are compact pre-trained models for
+            Multivariate Time-Series Forecasting, open-sourced by IBM Research
+          capabilities:
+            - chat
+        - providerModel: ibm/slate-125m-english-rtrvr-v2
+          displayName: slate-125m-english-rtrvr-v2
+          description: >-
+            An embedding model with 512 token limit. It has 125 million
+            parameters and an embedding dimension of 768.
+          capabilities:
+            - chat
+        - providerModel: ibm/slate-30m-english-rtrvr-v2
+          displayName: slate-30m-english-rtrvr-v2
+          description: >-
+            An embedding model with 512 token limit. It has 30 million
+            parameters and an embedding dimension of 384.
+          capabilities:
+            - chat
+        - providerModel: intfloat/multilingual-e5-large
+          displayName: multilingual-e5-large
+          description: >-
+            An embedding model. It has 560 million parameters, has 24 layers and
+            the embedding size is 1024.
+          capabilities:
+            - chat
+        - providerModel: meta-llama/llama-3-1-70b-gptq
+          displayName: llama-3-1-70b-gptq
+          description: >-
+            Llama 3.1 is an auto-regressive language model that uses an
+            optimized transformer architecture. The tuned versions use
+            supervised fine-tuning (SFT) and reinforcement learning with human
+            feedback (RLHF) to align with human preferences for helpfulness and
+            safety.
+          capabilities:
+            - chat
+        - providerModel: meta-llama/llama-3-1-8b
+          displayName: llama-3-1-8b
+          description: >-
+            Llama-3-1-8b is an auto-regressive language model that uses an
+            optimized transformer architecture.
+          capabilities:
+            - chat
+        - providerModel: meta-llama/llama-3-3-70b-instruct
+          pricing:
+            inputPerMillion: 0.753
+            outputPerMillion: 0.753
+          displayName: llama-3-3-70b-instruct
+          description: >-
+            This version of Llama-3.3-70b-instruct is also the FP8 quantized
+            version of the original FP16 weights.
+          capabilities:
+            - chat
+        - providerModel: meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+          pricing:
+            inputPerMillion: 0.371
+            outputPerMillion: 1.484
+          displayName: llama-4-maverick-17b-128e-instruct-fp8
+          description: >-
+            Llama 4 Maverick, a 17 billion active parameter model with 128
+            experts.
+          capabilities:
+            - chat
+        - providerModel: mistral-large-2512
+          displayName: mistral-large-2512
+          description: >-
+            Mistral Large 3, is a state-of-the-art, open-weight, general-purpose
+            multimodal model with a granular Mixture-of-Experts architecture. It
+            features 41B active parameters and 675B total parameters.
+          capabilities:
+            - chat
+        - providerModel: mistralai/mistral-medium-2505
+          pricing:
+            inputPerMillion: 3
+            outputPerMillion: 10
+          displayName: mistral-medium-2505
+          description: >-
+            Mistral Medium 3 (25.05) is our latest iteration of the Mistral
+            Medium model family.
+          capabilities:
+            - chat
+        - providerModel: mistralai/mistral-small-3-1-24b-instruct-2503
+          pricing:
+            inputPerMillion: 0.106
+            outputPerMillion: 0.318
+          displayName: mistral-small-3-1-24b-instruct-2503
+          description: >-
+            This model is an instruction-finetuned version of:
+            Mistral-Small-3.1-24B-Base-2503.
+          capabilities:
+            - chat
+        - providerModel: openai/gpt-oss-120b
+          pricing:
+            inputPerMillion: 0
+            outputPerMillion: 0.06
+          displayName: gpt-oss-120b
+          description: >-
+            openai/gpt-oss-120b is an OpenAIs open-weight models designed for
+            powerful reasoning, agentic tasks, and versatile developer use
+            cases.
+          capabilities:
+            - chat
+        - providerModel: sentence-transformers/all-minilm-l6-v2
+          timeoutMs: 1
+          displayName: all-minilm-l6-v2
+          description: >-
+            An embedding model with 128 token limit. It has 23 million
+            parameters and an embedding dimension of 384.
+          capabilities:
+            - chat

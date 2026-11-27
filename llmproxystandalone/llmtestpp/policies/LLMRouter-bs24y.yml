@@ -1,0 +1,74 @@
+kind: LLMRouter
+apiVersion: api.ibm.com/v1
+metadata:
+  name: LLMRouter-bs24y
+  namespace: llmproxystandalone
+  version: 1.0.0
+  tags: []
+  domain: ai-platform
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  models:
+    - name: ibm/granite-3-1-8b-base
+      targets:
+        - target: llmprovider.watsondeploy.ibm/granite-3-1-8b-base
+    - name: ibm/granite-4-h-small
+      targets:
+        - target: llmprovider.watsondeploy.ibm/granite-4-h-small
+    - name: ibm/granite-embedding-278m-multilingual
+      targets:
+        - target: llmprovider.watsondeploy.ibm/granite-embedding-278m-multilingual
+    - name: ibm/granite-ttm-1024-96-r2
+      targets:
+        - target: llmprovider.watsondeploy.ibm/granite-ttm-1024-96-r2
+    - name: ibm/granite-ttm-1536-96-r2
+      targets:
+        - target: llmprovider.watsondeploy.ibm/granite-ttm-1536-96-r2
+    - name: ibm/granite-ttm-512-96-r2
+      targets:
+        - target: llmprovider.watsondeploy.ibm/granite-ttm-512-96-r2
+    - name: ibm/slate-125m-english-rtrvr-v2
+      targets:
+        - target: llmprovider.watsondeploy.ibm/slate-125m-english-rtrvr-v2
+    - name: ibm/slate-30m-english-rtrvr-v2
+      targets:
+        - target: llmprovider.watsondeploy.ibm/slate-30m-english-rtrvr-v2
+    - name: intfloat/multilingual-e5-large
+      targets:
+        - target: llmprovider.watsondeploy.intfloat/multilingual-e5-large
+    - name: meta-llama/llama-3-1-70b-gptq
+      targets:
+        - target: llmprovider.watsondeploy.meta-llama/llama-3-1-70b-gptq
+    - name: meta-llama/llama-3-1-8b
+      targets:
+        - target: llmprovider.watsondeploy.meta-llama/llama-3-1-8b
+    - name: meta-llama/llama-3-3-70b-instruct
+      targets:
+        - target: llmprovider.watsondeploy.meta-llama/llama-3-3-70b-instruct
+    - name: meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+      targets:
+        - target: >-
+            llmprovider.watsondeploy.meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+    - name: mistral-large-2512
+      targets:
+        - target: llmprovider.watsondeploy.mistral-large-2512
+    - name: mistralai/mistral-medium-2505
+      targets:
+        - target: llmprovider.watsondeploy.mistralai/mistral-medium-2505
+    - name: mistralai/mistral-small-3-1-24b-instruct-2503
+      targets:
+        - target: >-
+            llmprovider.watsondeploy.mistralai/mistral-small-3-1-24b-instruct-2503
+    - name: openai/gpt-oss-120b
+      targets:
+        - target: llmprovider.watsondeploy.openai/gpt-oss-120b
+    - name: sentence-transformers/all-minilm-l6-v2
+      targets:
+        - target: llmprovider.watsondeploy.sentence-transformers/all-minilm-l6-v2
+  strategy: simpleShuffle
+  numRetries: 3
+  allowedFails: 3
+  cooldownTimeSecs: 5
+  streaming: false

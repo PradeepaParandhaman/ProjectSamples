@@ -1,0 +1,19 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: freeflowpolicysequence-llmtestpp-bs24y
+  namespace: llmproxystandalone
+  version: 1.0.0
+  tags: []
+  domain: ai-platform
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  main:
+    - $ref: llmproxystandalone:ExtractIdentity-bs24y:1.0.0
+    - $ref: llmproxystandalone:Authenticate-bs24y:1.0.0
+    - $ref: llmproxystandalone:Authorize-bs24y:1.0.0
+    - $ref: llmproxystandalone:LLMRouter-bs24y:1.0.0
+  monitoring:
+    $ref: llmproxystandalone:Telemetry-bs24y:1.0.0

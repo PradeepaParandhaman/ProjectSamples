@@ -1,0 +1,14 @@
+kind: Plan
+apiVersion: api.ibm.com/v1
+metadata:
+  name: plan-llmtestpp-bs24y
+  namespace: llmproxystandalone
+  version: 1.0.0
+  tags: []
+  description: ''
+  domain: ai-platform
+spec:
+  qos:
+    withQuota:
+      llm-router-token-weighted:
+        - $ref: llmproxystandalone:llm-router-token-weighted-bs24y:1.0.0

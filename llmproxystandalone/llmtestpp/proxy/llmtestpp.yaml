@@ -1,0 +1,31 @@
+kind: LLMProxy
+apiVersion: api.ibm.com/v1
+metadata:
+  name: llmtestpp
+  namespace: llmproxystandalone
+  version: 1.0.0
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+  domain: ai-platform
+  description: ""
+spec:
+  title: llmtestpp
+  tlsClientProfile: sample-tls-client-profile:1.0.0
+  providerDeployments:
+    - $ref: llmproxystandalone:providerdeployment-llmprovider-llmtestpp-bs24y:1.0.0
+  basePath: /test
+  operations:
+    - createChatCompletion
+    - createResponse
+    - createEmbedding
+    - listModels
+    - retrieveModel
+    - watsonxTextChat
+    - tokenize
+    - textGen
+  plan:
+    $ref: llmproxystandalone:plan-llmtestpp-bs24y:1.0.0
+  policy-sequence:
+    - $ref: llmproxystandalone:freeflowpolicysequence-llmtestpp-bs24y:1.0.0
