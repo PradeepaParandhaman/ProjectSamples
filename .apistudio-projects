@@ -82,4 +82,9 @@ projects:
     id: NRPcrATl
     description: ''
     tags: []
-    lastUpdated: 1795766142201
+    lastUpdated: 1795766148200
+  llmproxystandalone:
+    id: 91FcU4Hf
+    description: ''
+    tags: []
+    lastUpdated: 1795766507254
