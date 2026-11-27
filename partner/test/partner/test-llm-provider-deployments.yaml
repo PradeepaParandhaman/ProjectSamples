@@ -1,0 +1,97 @@
+kind: LLMProviderDeployments
+apiVersion: api.ibm.com/v1
+metadata:
+  name: test-llm-provider-deployments
+  namespace: partner
+  version: 1.0.0
+  domain: partner
+spec:
+  name: again-watsonx
+  provider: test:again-watsonx:1.0.0
+  credential:
+    byok:
+      header: test
+  deployments:
+    - name: test-deployment
+      models:
+        - providerModel: ibm/granite-3-1-8b-base
+          capabilities:
+            - chat
+        - providerModel: ibm/granite-4-h-small
+          capabilities:
+            - chat
+          pricing:
+            inputPerMillion: 0
+            outputPerMillion: 10
+        - providerModel: ibm/granite-embedding-278m-multilingual
+          capabilities:
+            - embedding
+        - providerModel: ibm/granite-ttm-1024-96-r2
+          capabilities:
+            - chat
+          pricing:
+            inputPerMillion: 0.38
+            outputPerMillion: 0.38
+        - providerModel: ibm/granite-ttm-1536-96-r2
+          capabilities:
+            - chat
+          pricing:
+            inputPerMillion: 0.38
+            outputPerMillion: 0.38
+        - providerModel: ibm/granite-ttm-512-96-r2
+          capabilities:
+            - chat
+          pricing:
+            inputPerMillion: 0.38
+            outputPerMillion: 0.38
+        - providerModel: ibm/slate-125m-english-rtrvr-v2
+          capabilities:
+            - chat
+        - providerModel: ibm/slate-30m-english-rtrvr-v2
+          capabilities:
+            - chat
+        - providerModel: intfloat/multilingual-e5-large
+          capabilities:
+            - chat
+        - providerModel: meta-llama/llama-3-1-70b-gptq
+          capabilities:
+            - chat
+        - providerModel: meta-llama/llama-3-1-8b
+          capabilities:
+            - chat
+        - providerModel: meta-llama/llama-3-3-70b-instruct
+          capabilities:
+            - chat
+          pricing:
+            inputPerMillion: 0.753
+            outputPerMillion: 0.753
+        - providerModel: meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+          capabilities:
+            - chat
+          pricing:
+            inputPerMillion: 0.371
+            outputPerMillion: 1.484
+        - providerModel: mistral-large-2512
+          capabilities:
+            - chat
+        - providerModel: mistralai/mistral-medium-2505
+          capabilities:
+            - chat
+          pricing:
+            inputPerMillion: 3
+            outputPerMillion: 10
+        - providerModel: mistralai/mistral-small-3-1-24b-instruct-2503
+          capabilities:
+            - chat
+          pricing:
+            inputPerMillion: 0.106
+            outputPerMillion: 0.318
+        - providerModel: openai/gpt-oss-120b
+          capabilities:
+            - chat
+          pricing:
+            inputPerMillion: 0
+            outputPerMillion: 0.06
+        - providerModel: sentence-transformers/all-minilm-l6-v2
+          capabilities:
+            - chat

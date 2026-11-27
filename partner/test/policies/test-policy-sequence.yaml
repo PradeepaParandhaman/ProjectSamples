@@ -1,0 +1,20 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: test-policy-sequence
+  namespace: partner
+  version: 1.0.0
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+    scope: partner
+  domain: partner
+spec:
+  main:
+    - $kind: LLMRouter
+      $ref: partner:test-llm-router:1.0.0
+      enabled: true
+  monitoring:
+    $kind: Telemetry
+    $ref: partner:test-telemetry:1.0.0

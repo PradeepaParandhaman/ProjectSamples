@@ -1,0 +1,25 @@
+kind: Partner
+apiVersion: api.ibm.com/v1
+metadata:
+  name: test
+  namespace: partner
+  version: 1.0.0
+  domain: partner
+  tags: []
+spec:
+  partnerId: test-pzyic
+  title: test
+  basePath: /
+  operations:
+    - createChatCompletion
+    - createResponse
+    - createEmbedding
+    - listModels
+    - retrieveModel
+    - watsonxTextChat
+    - tokenize
+    - textGen
+  policy-sequence:
+    $ref: partner:test-policy-sequence:1.0.0
+  llmProviderDeployments:
+    - $ref: partner:test-llm-provider-deployments:1.0.0

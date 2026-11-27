@@ -1,0 +1,129 @@
+{
+  "nodes": [
+    {
+      "id": "3115ac2b-a9ff-4971-a7b6-74212a715df5:0",
+      "projectId": "NRPcrATl",
+      "filePath": "partner/test/policies/test-telemetry.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795766144621,
+      "schemaVersion": 1,
+      "kind": "Telemetry",
+      "name": "test-telemetry",
+      "namespace": "partner",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "162f0c34cbf0cc7b"
+    },
+    {
+      "id": "3b853765-3259-4b9e-b39c-316340e00abb:0",
+      "projectId": "NRPcrATl",
+      "filePath": "partner/test/policies/test-llm-router.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795766147370,
+      "schemaVersion": 1,
+      "kind": "LLMRouter",
+      "name": "test-llm-router",
+      "namespace": "partner",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "c6b02162e88b12e6"
+    },
+    {
+      "id": "47da9836-bf26-4b9b-8f0a-95efab4f55c3:0",
+      "projectId": "NRPcrATl",
+      "filePath": "partner/test/partner/test-llm-provider-deployments.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795766146663,
+      "schemaVersion": 1,
+      "kind": "LLMProviderDeployments",
+      "name": "test-llm-provider-deployments",
+      "namespace": "partner",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "0a170b66dcbf3864"
+    },
+    {
+      "id": "5ac786ce-49db-4cf1-8e86-370b16866bdd:0",
+      "projectId": "NRPcrATl",
+      "filePath": "partner/test/partner/test.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795766148193,
+      "schemaVersion": 1,
+      "kind": "Partner",
+      "name": "test",
+      "namespace": "partner",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "9a77412d4b02d7be"
+    },
+    {
+      "id": "81cf9df4-6c19-4b66-921a-7a4950a5679f:0",
+      "projectId": "NRPcrATl",
+      "filePath": "partner/test/policies/test-policy-sequence.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795766146008,
+      "schemaVersion": 1,
+      "kind": "FreeFlowPolicySequence",
+      "name": "test-policy-sequence",
+      "namespace": "partner",
+      "version": "1.0.0",
+      "domain": "partner",
+      "contentHash": "394d7a6670b9d894"
+    }
+  ],
+  "edges": [
+    {
+      "id": "01902d49-60f2-40d5-9a0f-4e1c2a6173d4",
+      "projectId": "NRPcrATl",
+      "sourceNodeId": "5ac786ce-49db-4cf1-8e86-370b16866bdd:0",
+      "targetNodeId": "47da9836-bf26-4b9b-8f0a-95efab4f55c3:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner:test-llm-provider-deployments:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795766148194,
+      "lastValidated": 1795766148194
+    },
+    {
+      "id": "1c11d6ee-58ea-45cf-8be8-15c9de3a6a7c",
+      "projectId": "NRPcrATl",
+      "sourceNodeId": "5ac786ce-49db-4cf1-8e86-370b16866bdd:0",
+      "targetNodeId": "81cf9df4-6c19-4b66-921a-7a4950a5679f:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner:test-policy-sequence:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795766148194,
+      "lastValidated": 1795766148194
+    },
+    {
+      "id": "69fa726d-dbf4-4b69-a1cf-82e316f4dd62",
+      "projectId": "NRPcrATl",
+      "sourceNodeId": "81cf9df4-6c19-4b66-921a-7a4950a5679f:0",
+      "targetNodeId": "3b853765-3259-4b9e-b39c-316340e00abb:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner:test-llm-router:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795766146009,
+      "lastValidated": 1795766147373
+    },
+    {
+      "id": "9fdd068e-11b4-4a6b-9314-43945c142234",
+      "projectId": "NRPcrATl",
+      "sourceNodeId": "81cf9df4-6c19-4b66-921a-7a4950a5679f:0",
+      "targetNodeId": "3115ac2b-a9ff-4971-a7b6-74212a715df5:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner:test-telemetry:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795766146010,
+      "lastValidated": 1795766146010
+    }
+  ]
+}
