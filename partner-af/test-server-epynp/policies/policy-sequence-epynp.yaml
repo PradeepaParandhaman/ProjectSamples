@@ -1,0 +1,17 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: policy-sequence-epynp
+  namespace: partner-af
+  version: 1.0.0
+  tags: []
+  domain: mcp
+  labels:
+    gatewayTypes:
+      - nano
+    partner: true
+spec:
+  main:
+    - $ref: partner-af:mcp-invoke-epynp:1.0.0
+  monitoring:
+    $ref: partner-af:telemetry-epynp:1.0.0

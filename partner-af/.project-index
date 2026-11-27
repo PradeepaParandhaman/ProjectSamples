@@ -31,6 +31,30 @@
       "contentHash": "61a23453aa7e8d38"
     },
     {
+      "id": "253abd2d-1150-41f6-a104-3d79c900b35c:0",
+      "projectId": "G81TepVd",
+      "filePath": "partner-af/test-server-epynp/policies/telemetry-epynp.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795768007161,
+      "schemaVersion": 1,
+      "kind": "Telemetry",
+      "name": "telemetry-epynp",
+      "namespace": "partner-af",
+      "version": "1.0.0",
+      "domain": "mcp",
+      "contentHash": "f8020fee3a622365"
+    },
+    {
+      "id": "2bed1ecd-265d-4dfe-81d2-ccf01bf428b6:0",
+      "projectId": "G81TepVd",
+      "filePath": "partner-af/.project-index",
+      "docIndex": 0,
+      "assetType": "support",
+      "lastIndexed": 1795767976840,
+      "schemaVersion": 1
+    },
+    {
       "id": "381758d2-e7ed-4cd8-b222-8d3a1dc7e7f1:0",
       "projectId": "G81TepVd",
       "filePath": "partner-af/policies/partner-af-telemetry.yaml",
@@ -46,19 +70,94 @@
       "contentHash": "036f1e77c37acbd4"
     },
     {
+      "id": "390dce36-6d6a-4f93-8388-a29896810b46:0",
+      "projectId": "G81TepVd",
+      "filePath": "partner-af/test-server-epynp/server/plan-epynp.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795768008928,
+      "schemaVersion": 1,
+      "kind": "Plan",
+      "name": "plan-epynp",
+      "namespace": "partner-af",
+      "version": "1.0.0",
+      "domain": "mcp",
+      "contentHash": "40f56ef68b4e0dd9"
+    },
+    {
+      "id": "3bb250d6-273f-48bf-b842-71ebeb1b247b:0",
+      "projectId": "G81TepVd",
+      "filePath": "partner-af/test-server-epynp/server/test-tool-epynp.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795768010911,
+      "schemaVersion": 1,
+      "kind": "MCPTools",
+      "name": "test-tool-epynp",
+      "namespace": "partner-af",
+      "version": "1.0.0",
+      "domain": "mcp",
+      "contentHash": "8ca10a4cc27d5957"
+    },
+    {
+      "id": "49231c24-adf5-4c1a-a74a-f8bf7dbff17e:0",
+      "projectId": "G81TepVd",
+      "filePath": "partner-af/test-server-epynp/server/quota-epynp.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795768009865,
+      "schemaVersion": 1,
+      "kind": "Quota",
+      "name": "quota-epynp",
+      "namespace": "partner-af",
+      "version": "1.0.0",
+      "domain": "mcp",
+      "contentHash": "c3f7504a9cb197e5"
+    },
+    {
       "id": "5dec7a83-cad5-4f7c-96f6-214df7ec55aa:0",
       "projectId": "G81TepVd",
       "filePath": "partner-af/partner/partner-af.yaml",
       "docIndex": 0,
       "assetType": "resource",
-      "lastIndexed": 1795517529138,
+      "lastIndexed": 1795768013152,
       "schemaVersion": 1,
       "kind": "Partner",
       "name": "partner-af",
       "namespace": "partner-ns-af",
       "version": "1.0.0",
       "domain": "partner",
-      "contentHash": "8a71994fa7dd88c6"
+      "contentHash": "b4d0de0d37dcd0b9"
+    },
+    {
+      "id": "7d914012-e17b-4130-a378-9f0fa283c5e8:0",
+      "projectId": "G81TepVd",
+      "filePath": "partner-af/test-server-epynp/server/test-server-epynp.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795768011834,
+      "schemaVersion": 1,
+      "kind": "MCPServer",
+      "name": "test-server-epynp",
+      "namespace": "partner-af",
+      "version": "1.0.0",
+      "domain": "mcp",
+      "contentHash": "f4182fce3f8aa84b"
+    },
+    {
+      "id": "92e413c0-07b8-4b7d-a376-5aec1bbc7ad8:0",
+      "projectId": "G81TepVd",
+      "filePath": "partner-af/test-server-epynp/policies/policy-sequence-epynp.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795768008061,
+      "schemaVersion": 1,
+      "kind": "FreeFlowPolicySequence",
+      "name": "policy-sequence-epynp",
+      "namespace": "partner-af",
+      "version": "1.0.0",
+      "domain": "mcp",
+      "contentHash": "db64b0b800656a0d"
     },
     {
       "id": "a34ea018-5505-4004-b875-cc761e68d22f:0",
@@ -106,6 +205,21 @@
       "contentHash": "f218e975cd866a69"
     },
     {
+      "id": "edff0362-1922-4289-a816-2233bbc3e3a6:0",
+      "projectId": "G81TepVd",
+      "filePath": "partner-af/test-server-epynp/policies/mcp-invoke-epynp.yaml",
+      "docIndex": 0,
+      "assetType": "resource",
+      "lastIndexed": 1795768006192,
+      "schemaVersion": 1,
+      "kind": "MCPInvoke",
+      "name": "mcp-invoke-epynp",
+      "namespace": "partner-af",
+      "version": "1.0.0",
+      "domain": "mcp",
+      "contentHash": "93a80c5ba22f9eb0"
+    },
+    {
       "id": "fabcc128-d7f1-488f-9da8-bb27af23ae40:0",
       "projectId": "G81TepVd",
       "filePath": "partner-af/policies/partner-af-policy-sequence.yaml",
@@ -123,6 +237,18 @@
   ],
   "edges": [
     {
+      "id": "05668173-9fa5-46c5-b51f-05a067c8f935",
+      "projectId": "G81TepVd",
+      "sourceNodeId": "92e413c0-07b8-4b7d-a376-5aec1bbc7ad8:0",
+      "targetNodeId": "253abd2d-1150-41f6-a104-3d79c900b35c:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner-af:telemetry-epynp:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795768008075,
+      "lastValidated": 1795768008075
+    },
+    {
       "id": "1277d0fa-26d4-47da-be30-e0fb5094932a",
       "projectId": "G81TepVd",
       "sourceNodeId": "5dec7a83-cad5-4f7c-96f6-214df7ec55aa:0",
@@ -133,6 +259,42 @@
       "isValid": true,
       "createdAt": 1795517529140,
       "lastValidated": 1795517529140
+    },
+    {
+      "id": "1a381dd8-b1fe-487d-918f-65bb06b8e00e",
+      "projectId": "G81TepVd",
+      "sourceNodeId": "5dec7a83-cad5-4f7c-96f6-214df7ec55aa:0",
+      "targetNodeId": "7d914012-e17b-4130-a378-9f0fa283c5e8:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner-af:test-server-epynp:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795768013156,
+      "lastValidated": 1795768013156
+    },
+    {
+      "id": "23b17d88-5666-4bd0-9fe1-8d894cb55637",
+      "projectId": "G81TepVd",
+      "sourceNodeId": "92e413c0-07b8-4b7d-a376-5aec1bbc7ad8:0",
+      "targetNodeId": "edff0362-1922-4289-a816-2233bbc3e3a6:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner-af:mcp-invoke-epynp:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795768008074,
+      "lastValidated": 1795768008074
+    },
+    {
+      "id": "39cb1fe0-18b0-4c40-98dc-ed9a3b13da87",
+      "projectId": "G81TepVd",
+      "sourceNodeId": "7d914012-e17b-4130-a378-9f0fa283c5e8:0",
+      "targetNodeId": "390dce36-6d6a-4f93-8388-a29896810b46:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner-af:plan-epynp:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795768011899,
+      "lastValidated": 1795768011899
     },
     {
       "id": "585f6bad-8a48-497c-ba24-294201811f8e",
@@ -159,6 +321,30 @@
       "lastValidated": 1795517529899
     },
     {
+      "id": "5a51b476-266f-4e08-a36d-ee269120a47b",
+      "projectId": "G81TepVd",
+      "sourceNodeId": "7d914012-e17b-4130-a378-9f0fa283c5e8:0",
+      "targetNodeId": "92e413c0-07b8-4b7d-a376-5aec1bbc7ad8:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner-af:policy-sequence-epynp:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795768011899,
+      "lastValidated": 1795768011899
+    },
+    {
+      "id": "8b8cf6f8-9ba6-4fd8-9729-06fb6ae8cb60",
+      "projectId": "G81TepVd",
+      "sourceNodeId": "390dce36-6d6a-4f93-8388-a29896810b46:0",
+      "targetNodeId": "49231c24-adf5-4c1a-a74a-f8bf7dbff17e:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner-af:quota-epynp:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795768008930,
+      "lastValidated": 1795768009948
+    },
+    {
       "id": "8d1e549d-536b-45cf-b89b-a189c4cc1faf",
       "projectId": "G81TepVd",
       "sourceNodeId": "00fd68a6-c526-4f95-a8a8-5d4efd5e9e03:0",
@@ -169,6 +355,18 @@
       "isValid": true,
       "createdAt": 1795517528465,
       "lastValidated": 1795517528465
+    },
+    {
+      "id": "a6e83383-2d40-4378-b7a6-ab79dce33a14",
+      "projectId": "G81TepVd",
+      "sourceNodeId": "7d914012-e17b-4130-a378-9f0fa283c5e8:0",
+      "targetNodeId": "3bb250d6-273f-48bf-b842-71ebeb1b247b:0",
+      "targetRefType": "same-project",
+      "targetRefString": "partner-af:test-tool-epynp:1.0.0",
+      "targetRefKind": "resource",
+      "isValid": true,
+      "createdAt": 1795768011899,
+      "lastValidated": 1795768011899
     },
     {
       "id": "baee8e51-70df-40de-8365-dbd3be219219",

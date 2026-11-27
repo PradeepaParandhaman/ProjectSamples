@@ -1,0 +1,21 @@
+kind: MCPServer
+apiVersion: api.ibm.com/v1
+metadata:
+  name: test-server-epynp
+  namespace: partner-af
+  version: 1.0.0
+  tags: []
+  domain: mcp
+  labels:
+    origin: mcp-mcp
+    partner: true
+spec:
+  title: test
+  protocolVersion: V2025_11_25
+  plans:
+    - $ref: partner-af:plan-epynp:1.0.0
+  policy-sequence:
+    - $ref: partner-af:policy-sequence-epynp:1.0.0
+  capabilities:
+    tools:
+      - $ref: partner-af:test-tool-epynp:1.0.0

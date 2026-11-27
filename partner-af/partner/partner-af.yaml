@@ -23,3 +23,5 @@ spec:
     $ref: partner-ns-af:partner-af-policy-sequence:1.0.0
   llmProviderDeployments:
     - $ref: partner-ns-af:partner-af-llm-provider-deployments:1.0.0
+  mcpServer:
+    - $ref: partner-af:test-server-epynp:1.0.0
