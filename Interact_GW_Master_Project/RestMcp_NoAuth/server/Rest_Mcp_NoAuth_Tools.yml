@@ -1,0 +1,268 @@
+kind: MCPTools
+apiVersion: api.ibm.com/v1
+metadata:
+  name: Rest_Mcp_NoAuth_Tools
+  namespace: Interact_GW_Master_Project
+  version: '1.0'
+  tags: []
+  description: >-
+    This is a sample Pet Store Server based on the OpenAPI 3.0 specification.
+    You can find out more about
+
+
+    Swagger at [https://swagger.io](https://swagger.io). In the third iteration
+    of the pet store, we've switched to the design first approach!
+
+
+    You can now help us improve the API whether it's by making changes to the
+    definition itself or to the code.
+
+
+    That way, with time, we can improve the API in general, and expose some of
+    the new features in OAS3.
+
+
+
+    Some useful links:
+
+
+    - [The Pet Store
+    repository](https://github.com/swagger-api/swagger-petstore)
+
+
+    - [The source API definition for the Pet
+    Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
+  domain: mcp
+  labels:
+    api-spec: ./pet-store-spec.yml
+spec:
+  tools:
+    - name: modify_pet
+      description: >-
+        Updates an existing pet's details in the pet store database. It allows
+        modification of pet information identified by a specific ID. 1. It
+        updates pet name and category. 2. It can change photo URLs and tags. 3.
+        It can modify pet status (available, pending, sold).
+      inputSchema:
+        type: object
+        properties:
+          id:
+            type: integer
+            format: int64
+            example: 10
+            description: A unique identifier for the pet (e.g., 10).
+          name:
+            type: string
+            example: doggie
+            description: The name of the pet (required).
+          category:
+            type: object
+            properties:
+              id:
+                type: integer
+                format: int64
+                example: 1
+              name:
+                type: string
+                example: Dogs
+            xml:
+              name: category
+            description: The category of the pet.
+          photoUrls:
+            type: array
+            xml:
+              wrapped: true
+            items:
+              type: string
+              xml:
+                name: photoUrl
+            description: An array of URLs for pet photos. Required.
+          tags:
+            type: array
+            xml:
+              wrapped: true
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                name:
+                  type: string
+              xml:
+                name: tag
+            description: An array of tags.
+          status:
+            type: string
+            description: >-
+              The current status of the pet in the store. Can be "available",
+              "pending", or "sold".
+            enum:
+              - available
+              - pending
+              - sold
+        required:
+          - name
+          - photoUrls
+      title: Update an existing pet.
+      x-api-binding:
+        operationPath: /pet
+        operationMethod: PUT
+        api:
+          $path: ./pet-store-spec.yml
+    - name: register_pet
+      description: >-
+        Adds a new pet to the pet store system. It creates a new pet record with
+        provided details. 1. It assigns a name, category, and status to the pet.
+        2. It can upload multiple photo URLs. 3. It can Tag the pet with
+        keywords.
+      inputSchema:
+        type: object
+        properties:
+          id:
+            type: integer
+            format: int64
+            example: 10
+            description: A unique identifier for the pet (e.g., 10).
+          name:
+            type: string
+            example: doggie
+            description: The name of the pet (required).
+          category:
+            type: object
+            properties:
+              id:
+                type: integer
+                format: int64
+                example: 1
+              name:
+                type: string
+                example: Dogs
+            xml:
+              name: category
+            description: The category of the pet.
+          photoUrls:
+            type: array
+            xml:
+              wrapped: true
+            items:
+              type: string
+              xml:
+                name: photoUrl
+            description: URLs of photos of the pet (required).
+          tags:
+            type: array
+            xml:
+              wrapped: true
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  format: int64
+                name:
+                  type: string
+              xml:
+                name: tag
+            description: Additional tags to describe the pet.
+          status:
+            type: string
+            description: >-
+              The current status of the pet in the store. Can be "available",
+              "pending", or "sold".
+            enum:
+              - available
+              - pending
+              - sold
+        required:
+          - name
+          - photoUrls
+      title: Add a new pet to the store.
+      x-api-binding:
+        operationPath: /pet
+        operationMethod: POST
+        api:
+          $path: ./pet-store-spec.yml
+    - name: fetch_pet_by_id
+      description: >-
+        Retrieves details of a single pet using its unique ID. It fetches
+        comprehensive pet information for a specified pet ID. 1. It can provide
+        pet details like name, category, and status. 2. It returns photo URLs
+        and tags associated with the pet. 3. It helps in tracking individual pet
+        records.
+      inputSchema:
+        type: object
+        properties:
+          petId:
+            description: The unique identifier of the pet to retrieve (required).
+            x-parameter-location: path
+            type: integer
+            format: int64
+        required:
+          - petId
+      title: Find pet by ID.
+      x-api-binding:
+        operationPath: /pet/{petId}
+        operationMethod: GET
+        api:
+          $path: ./pet-store-spec.yml
+    - name: revise_pet_with_form
+      description: >-
+        Updates pet details using form data. It allows editing of pet
+        information through a form interface. 1. It specifically updates the
+        pet's name and status. 2. It provides a user-friendly way to modify pet
+        records. 3. It is useful for quick edits without needing to specify all
+        parameters.
+      inputSchema:
+        type: object
+        properties:
+          petId:
+            description: The unique identifier of the pet to update (required).
+            x-parameter-location: path
+            type: integer
+            format: int64
+          name:
+            description: The new name for the pet.
+            x-parameter-location: query
+            type: string
+          status:
+            description: The new status for the pet.
+            x-parameter-location: query
+            type: string
+        required:
+          - petId
+      title: Updates a pet in the store with form data.
+      x-api-binding:
+        operationPath: /pet/{petId}
+        operationMethod: POST
+        api:
+          $path: ./pet-store-spec.yml
+    - name: terminate_pet
+      description: >-
+        Removes a pet from the pet store. It deletes a pet record based on its
+        ID and optional API key. 1. It deletes the entire pet record, including
+        associated data. 2. It ensures data is removed safely using API
+        authentication. 3. It helps in managing pet inventory by removing
+        outdated or unnecessary records.
+      inputSchema:
+        type: object
+        properties:
+          api_key:
+            description: >-
+              A personal API key for authentication (e.g., "abcd1234"). Only
+              include if the user explicitly provides it.
+            x-parameter-location: header
+            type: string
+          petId:
+            description: The unique identifier of the pet to be deleted (e.g., 12345).
+            x-parameter-location: path
+            type: integer
+            format: int64
+        required:
+          - petId
+      title: Deletes a pet.
+      x-api-binding:
+        operationPath: /pet/{petId}
+        operationMethod: DELETE
+        api:
+          $path: ./pet-store-spec.yml

@@ -1,0 +1,14 @@
+kind: Plan
+apiVersion: api.ibm.com/v1
+metadata:
+  name: Mcp_Mcp_NoAuth_Plan
+  namespace: Interact_GW_Master_Project
+  version: 1.0.0
+  tags: []
+  description: ''
+  domain: mcp
+spec:
+  qos:
+    withQuota:
+      Mcp_Mcp_NoAuth_Plan-limit:
+        - $ref: Interact_GW_Master_Project:Mcp_Mcp_NoAuth_Quota:1.0.0

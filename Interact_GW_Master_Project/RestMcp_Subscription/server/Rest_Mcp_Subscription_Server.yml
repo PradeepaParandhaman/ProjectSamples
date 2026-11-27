@@ -1,0 +1,20 @@
+kind: MCPServer
+apiVersion: api.ibm.com/v1
+metadata:
+  name: rest-mcp-subscription-server
+  namespace: Interact_GW_Master_Project
+  version: '1.0'
+  tags: []
+  domain: mcp
+  labels:
+    origin: mcp-rest
+spec:
+  title: pet MCP Server
+  protocolVersion: V2025_11_25
+  plans:
+    - $ref: Interact_GW_Master_Project:Rest_Mcp_Subscription_Plan:1.0
+  policy-sequence:
+    - $ref: Interact_GW_Master_Project:Rest_Mcp_Subscription_PolicySequence:1.0
+  capabilities:
+    tools:
+      - $ref: Interact_GW_Master_Project:Rest_Mcp_Subscription_Tools:1.0

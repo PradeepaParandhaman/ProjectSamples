@@ -1,0 +1,16 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: Rest_Mcp_NoAuth_PolicySequence
+  namespace: Interact_GW_Master_Project
+  version: '1.0'
+  tags: []
+  domain: mcp
+  labels:
+    gatewayTypes:
+      - nano
+spec:
+  main:
+    - $ref: Interact_GW_Master_Project:Rest_Mcp_NoAuth_Invoke:1.0
+  monitoring:
+    $ref: Interact_GW_Master_Project:Rest_Mcp_NoAuth_Telemetry:1.0

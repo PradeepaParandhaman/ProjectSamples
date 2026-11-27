@@ -1,0 +1,19 @@
+kind: FreeFlowPolicySequence
+apiVersion: api.ibm.com/v1
+metadata:
+  name: Rest_Mcp_Subscription_PolicySequence
+  namespace: Interact_GW_Master_Project
+  version: '1.0'
+  tags: []
+  labels:
+    gatewayTypes:
+      - nano
+  domain: mcp
+spec:
+  main:
+    - $ref: Interact_GW_Master_Project:Rest_Mcp_Subscription_ExtractIdentity:1.0
+    - $ref: Interact_GW_Master_Project:Rest_Mcp_Subscription_Authenticate:1.0
+    - $ref: Interact_GW_Master_Project:Rest_Mcp_Subscription_Authorize:1.0
+    - $ref: Interact_GW_Master_Project:Rest_Mcp_Subscription_Invoke:1.0
+  monitoring:
+    $ref: Interact_GW_Master_Project:Rest_Mcp_Subscription_Telemetry:1.0
